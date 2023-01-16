@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/main/btnQuit.gd" type="Script" id=1]
+[ext_resource path="res://ui/main/btnNewGame.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+
+[node name="btnNewGame" type="Button" parent="."]
+margin_left = 100.0
+margin_top = 11.0
+margin_right = 952.0
+margin_bottom = 117.0
+rect_pivot_offset = Vector2( 599, 106 )
+text = "New game"
+script = ExtResource( 2 )
+
+[node name="Button2" type="Button" parent="."]
+anchor_right = 0.136
+anchor_bottom = 0.3
+margin_left = 100.0
+margin_top = 133.0
+margin_right = 812.736
+margin_bottom = 53.0
+text = "Load game"
+
+[node name="btnQuit" type="Button" parent="."]
+anchor_right = 0.136
+anchor_bottom = 0.3
+margin_left = 100.0
+margin_top = 458.0
+margin_right = 812.736
+margin_bottom = 378.0
+text = "Quit"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="btnNewGame" to="btnNewGame" method="_on_btnNewGame_pressed"]
+[connection signal="pressed" from="btnQuit" to="btnQuit" method="_on_btnQuit_pressed"]
